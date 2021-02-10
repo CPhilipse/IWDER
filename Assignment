@@ -1,6 +1,14 @@
-Assignment 2.2. Week 1: links and navigation.
+Assignment 2.3. Week 2: lists, tables and forms.
 
-Make 3 pages with articles and a navbar on the left side of the page (vertical).
-Scale this beautifully on different resolutions.
-When the vertical navbar cannot scale properly, have the nav go horizontally.
-Use the webpage of the previous assignment (2.1) as foundation.
+Take the website of the assignment 2.2 as foundation.
+Add a comments section to one of your pages on which users can leave comments.
+    e.g. https://dribbble.com/shots/5907097-Comment-Section
+
+Add a table to an article, make sure it is relevant.
+Add a contact form on the contact page on which the user can fill in their:
+    - name
+    - email
+    - message
+
+Make the website responsive.
+Follow the checklist.

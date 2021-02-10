@@ -9,9 +9,8 @@ body {
     font-size: 16px;
 }
 
+/* Remove underlining with abbreviations */
 abbr[title] {
-    border-bottom: none !important;
-    cursor: inherit !important;
     text-decoration: none !important;
 }
 
