@@ -1,6 +1,6 @@
-Simple webpage with good structure and make-up.
-Image is mandatory.
-Usage of semantic tags are mandatory.
-Make the webpage responsive.
-Validate code in W3C validator.
-Follow the checklist.
+Assignment 2.2. Week 1: links and navigation.
+
+Make 3 pages with articles and a navbar on the left side of the page (vertical).
+Scale this beautifully on different resolutions.
+When the vertical navbar cannot scale properly, have the nav go horizontally.
+Use the webpage of the previous assignment (2.1) as foundation.
