@@ -1,0 +1,46 @@
+* {
+    /* Browsers fill some padding and margin themselves, we don't want that */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+h1 {
+    /* standard size 210% so when the body font-size is adjusted,
+    the h1 will scale down automatically with it */
+    font-size: 210%;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 40%;
+    padding: 20px;
+    /* margin 0 on top and on the right and left have it position automatically in the 40% with.
+    This centers the content. */
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+figcaption {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+@media only screen and (max-width: 1400px) {
+    .container { width: 80% }
+}
+@media only screen and (max-width: 400px) {
+    .container { width: 90% }
+}

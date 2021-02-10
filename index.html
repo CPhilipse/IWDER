@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <title> Building components </title>
+</head>
+<body>
+    <main class="container">
+        <article>
+            <header>
+                <h1>How I programmatically built 256 new design system components in Figma</h1>
+            </header>
+            <figure>
+                <img src="img/pexels-typing.jpg" alt="A person who's typing">
+                <figcaption>
+                    <i>Photo of someone who's typing</i>
+                </figcaption>
+            </figure>
+            <section>
+                <h4>Introduction</h4>
+                <p>
+                    Uber’s Base design system offers a set of map marker components that are used extensively across our products,
+                    displayed any time we feature a map to the user. We’ve recently come across the need to
+                    showcase additional context on the map markers and settled on adding badges — an existing Base component — to achieve that.
+                </p>
+            </section>
+            <section>
+                <h4>The challenge</h4>
+                <p>
+                    The challenge was that both the map markers and the badges had multiple variations. Markers can be customized by size,
+                    needle length, icon slots and layout behavior, while the badges can have multiple sizes, label, and icon styles.
+                    The final set of badge-supporting map markers is a combination of all these options, a total of 256 new components.
+                </p>
+            </section>
+            <section>
+                <h4>Common approach</h4>
+                <p>
+                    The common approach is for a designer to manually create these new components, which is not only inefficient but very error prone
+                    due to the repetitiveness and volume of work required to create all variants and individually test them under multiple scenarios.
+                </p>
+            </section>
+            <details>
+                <summary>Literature</summary>
+                <a href="https://medium.com/uber-design/how-i-programmatically-built-256-new-design-system-components-in-figma-84ee26d119c1">
+                    Article made by Dylan Babbs
+                </a>
+                <p>This article originates from the Medium platform. Published at <time datetime="2021-02-09">9 Feb.</time></p>
+            </details>
+        </article>
+    </main>
+</body>
+</html>
