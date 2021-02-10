@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <title> Astounding CSS implementations </title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href=".">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="article1.html">
+                    <abbr title="Getting Things Done">GTD</abbr> system
+                </a>
+            </li>
+            <li>
+                <a href="article2.html">
+                    <abbr title="Cascading Style Sheets">CSS</abbr> implementations
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
+        <article>
+            <header>
+                <h1>The Surprising Things That <abbr title="Cascading Style Sheets">CSS</abbr> Can Animate</h1>
+            </header>
+            <figure>
+                <img src="img/pexels-css.jpg" alt="A computer screen with code.">
+                <figcaption>
+                    <i>Photo of a computer screen with code.</i>
+                </figcaption>
+            </figure>
+            <section>
+                <h4>Introduction</h4>
+                <p>
+                    When you think of animating <abbr title="Cascading Style Sheets">CSS</abbr> properties, which ones come to mind? I recently started wondering about the ones that don’t come to mind &#45
+                    properties that aren’t typically associated with animation, but turn out to be animatable.
+                </p>
+                <p>
+                    This articles explores some of the unexpected things that <abbr title="Cascading Style Sheets">CSS</abbr> can animate and some nifty things you can do by animating them.
+                </p>
+            </section>
+            <section>
+                <h4>Animating Shadows</h4>
+                <p>
+                    The box-shadow property can take multiple sets of values, as a comma-separated list, to create multiple shadows.
+                    By animating box-shadow, you animate a list of shadows into another list of shadows.
+                    Each shadow in the starting list is interpolated to the corresponding shadow in the ending list. Each interpolation is smooth,
+                    unless one has inset and the other doesn’t, in which case the entire animation falls back to being discrete.
+                </p>
+            </section>
+            <details>
+                <summary>Literature</summary>
+                <a href="https://codersblock.com/blog/the-surprising-things-that-css-can-animate/?ref=heydesigner">
+                    Article made by Codersblock
+                </a>
+                <p>This article originates from the Codersblock platform. Published at <time datetime="2020-06-08">June 8, 2020</time></p>
+            </details>
+        </article>
+    </main>
+</body>
+</html>
