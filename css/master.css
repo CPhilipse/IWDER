@@ -57,6 +57,13 @@ h1 {
     padding-bottom: 20px;
 }
 
+h2 {
+    /* standard size 210% so when the body font-size is adjusted,
+    the h1 will scale down automatically with it */
+    font-size: 110%;
+    font-weight: 600;
+}
+
 p {
     line-height: 1.55;
     margin-bottom: 20px;
