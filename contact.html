@@ -18,44 +18,33 @@
     <main class="container">
         <article>
             <header>
-                <h1>How I programmatically built 256 new design system components in Figma</h1>
+                <h1>Contact</h1>
             </header>
             <figure>
-                <img src="img/pexels-typing.jpg" alt="A person who's typing">
+                <img src="img/pexels-contact.jpg" alt="A phone">
                 <figcaption>
-                    <em>Photo of someone who's typing</em>
+                    <em>Photo of a phone</em>
                 </figcaption>
             </figure>
             <section>
-                <h2>Introduction</h2>
+                <h2>Neem contact met mij op!</h2>
                 <p>
-                    Uber’s Base design system offers a set of map marker components that are used extensively across our products,
-                    displayed any time we feature a map to the user. We’ve recently come across the need to
-                    showcase additional context on the map markers and settled on adding badges — an existing Base component — to achieve that.
+                    Met het formulier hieronder kan je contact met mij opnemen.
+                    Laat je naam, e-mail en bericht achter en dan zal ik zo snel mogelijk contact
+                    met je opnemen.
                 </p>
+                <form>
+                    <p> <label for="name"> Naam </label> </p>
+                    <input id="name" type="text" name="name" placeholder="Naam">
+
+                    <p> <label for="email"> E-mail </label> </p>
+                    <input id="email" type="text" name="email" placeholder="E-mail">
+
+                    <p> <label for="message"> Bericht </label> </p>
+                    <textarea name="message" id="message" rows="10" cols="40" placeholder="Type hier jouw bericht"></textarea>
+                    <input type="submit" name="verzend" value="Verzend">
+                </form>
             </section>
-            <section>
-                <h2>The challenge</h2>
-                <p>
-                    The challenge was that both the map markers and the badges had multiple variations. Markers can be customized by size,
-                    needle length, icon slots and layout behavior, while the badges can have multiple sizes, label, and icon styles.
-                    The final set of badge-supporting map markers is a combination of all these options, a total of 256 new components.
-                </p>
-            </section>
-            <section>
-                <h2>Common approach</h2>
-                <p>
-                    The common approach is for a designer to manually create these new components, which is not only inefficient but very error prone
-                    due to the repetitiveness and volume of work required to create all variants and individually test them under multiple scenarios.
-                </p>
-            </section>
-            <details>
-                <summary>Literature</summary>
-                <a href="https://medium.com/uber-design/how-i-programmatically-built-256-new-design-system-components-in-figma-84ee26d119c1">
-                    Article made by Dylan Babbs
-                </a>
-                <p>This article originates from the Medium platform. Published at <time datetime="2021-02-09">9 Feb.</time></p>
-            </details>
         </article>
     </main>
 </body>

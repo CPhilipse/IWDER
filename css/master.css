@@ -7,6 +7,7 @@
 body {
     box-sizing: border-box;
     font-size: 16px;
+    font-family: inherit;
 }
 
 body::-webkit-scrollbar {
@@ -55,6 +56,36 @@ nav ul li {
 
 nav ul li:hover {
     background-color: black;
+}
+
+input[type=submit] {
+    background-color: #2980b9;
+    color: white;
+    padding: 20px;
+    border: 1px solid #2980b9;
+}
+
+input[type=submit]:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+form p {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+input, textarea {
+    font-size: 110%;
+    width: 80%;
+    margin-bottom: 20px;
+    /* Textarea has font on its own. So overwrite it and inherit from body.*/
+    font-family: inherit;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 90%;
+    padding: 5px;
 }
 
 a, a:active, a:visited {
@@ -131,6 +162,10 @@ figcaption {
         width: 32%;
         height: 100%;
         text-align: center;
+    }
+
+    input, textarea {
+        width: 100%;
     }
 }
 
