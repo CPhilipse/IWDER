@@ -41,6 +41,45 @@
                     needle length, icon slots and layout behavior, while the badges can have multiple sizes, label, and icon styles.
                     The final set of badge-supporting map markers is a combination of all these options, a total of 256 new components.
                 </p>
+                <table>
+                    <caption>
+                        Table referencing pairing eligibility and relative pixel offset positioning information for map markers and badges.
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Marker <> Badge</th>
+                            <th>X small</th>
+                            <th>Small icon</th>
+                            <th>Medium icon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>X small</td>
+                            <td>-1</td>
+                            <td>Not eligible</td>
+                            <td>Not eligible</td>
+                        </tr>
+                        <tr>
+                            <td>Small</td>
+                            <td>-3</td>
+                            <td>0</td>
+                            <td>Not eligible</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>-5</td>
+                            <td>-3</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td>-7</td>
+                            <td>-0</td>
+                            <td>-2</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
             <section>
                 <h2>Common approach</h2>

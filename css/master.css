@@ -20,16 +20,26 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
 
+caption {
+    color: #777;
+}
+
 table {
     border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: mediumpurple;
+    color: white;
 }
 
 td, th {
     border: 1px solid #999;
     padding: 5px;
 }
-
-Tr:hover {
+tr:hover {
     background-color: #f4f4f4;
 }
 
@@ -99,7 +109,7 @@ a, a:active, a:visited {
     height: 100%;
 }
 
-details a {
+details a, details a:visited {
     color: blue;
     padding-bottom: 0;
 }
