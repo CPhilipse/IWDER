@@ -34,14 +34,14 @@
                     as possible.
                 </p>
                 <form>
-                    <p> <label for="name"> Name </label> </p>
-                    <input id="name" type="text" name="name" placeholder="Name">
+                    <p> <label for="name"> Name* </label> </p>
+                    <input maxlength="255" id="name" type="text" name="name" placeholder="Name" required>
 
-                    <p> <label for="email"> Email </label> </p>
-                    <input id="email" type="text" name="email" placeholder="Email">
+                    <p> <label for="email"> Email* </label> </p>
+                    <input maxlength="255" id="email" type="email" name="email" placeholder="Email" required>
 
                     <p> <label for="message"> Message </label> </p>
-                    <textarea name="message" id="message" rows="10" cols="40" placeholder="Type here your message"></textarea>
+                    <textarea maxlength="1000" name="message" id="message" rows="10" cols="40" placeholder="Type here your message"></textarea>
                     <input type="submit" name="submit" value="Submit">
                 </form>
             </section>
