@@ -1,14 +1,8 @@
-Assignment 2.3. Week 2: lists, tables and forms.
+Assignment 2.5. Week 3: positioning and layout with CSS-Grid.
 
-Take the website of the assignment 2.2 as foundation.
-Add a comments section to one of your pages on which users can leave comments.
-    e.g. https://dribbble.com/shots/5907097-Comment-Section
+Make a new website. Make a digital menu for a restaurant.
+This menu requires at least nine dishes, realize this through CSS grid.
+Make sure you have three kinds of food.
+    e.g. pizza, bread and pasta
 
-Add a table to an article, make sure it is relevant.
-Add a contact form on the contact page on which the user can fill in their:
-    - name
-    - email
-    - message
-
-Make the website responsive.
-Follow the checklist.
+Make the website responsive and W3C validated.
