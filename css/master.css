@@ -7,7 +7,7 @@
 body {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: inherit;
+    font-family: Verdana, Arial, serif;
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -45,33 +45,35 @@ main {
     padding: 40px 0;
 }
 
-main > figure {
+main > article {
     position: relative;
     transition: 0.4s all;
 }
 
-main > figure > img {
+main > article > figure > img {
     width: 100%;
-    height: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-main > figure:hover {
+main > article:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-main > figure > h1 {
+main > article > h1 {
     position: absolute;
     top: 0;
     color: white;
-    font-size: 150%;
+    font-size: 140%;
     padding: 20px 20px;
+    z-index: 9;
 }
 
 .overlay {
     position: absolute;
-    height: 100%;
     width: 100%;
+    height: 250px;
     opacity: 0.6;
     background-color: black;
 }
@@ -80,12 +82,19 @@ main > figure > h1 {
     main {
         grid-template-columns: 1fr;
     }
-}
 
+    main > article > h1 {
+        font-size: 120%;
+    }
+}
 
 @media (min-width: 700px) and (max-width: 900px) {
     main {
         grid-template-columns: 1fr 1fr;
+    }
+
+    main > article > h1 {
+        font-size: 130%;
     }
 }
 
