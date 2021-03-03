@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
+    <script src="js/main.js"></script>
     <title> Afhaalrestaurant </title>
 </head>
 <body>
@@ -11,7 +12,16 @@
         <h1>Menu</h1>
     </header>
     <main>
-        <article>
+        <form>
+            <input onclick="filterDishes()" type="checkbox" id="pizza" name="pizza" value="Pizza">
+            <label for="pizza">Pizza</label><br>
+            <input onclick="filterDishes()" type="checkbox" id="pasta" name="pasta" value="Pasta">
+            <label for="pasta">Pasta</label><br>
+            <input onclick="filterDishes()" type="checkbox" id="sandwiches" name="sandwiches" value="Sandwiches">
+            <label for="sandwiches">Sandwiches</label><br>
+        </form>
+
+        <article id="card0" data-category="pizza" data-card="card">
             <h1>Olive Veggie Pizza</h1>
             <figure>
                 <div class="overlay"></div>
@@ -19,7 +29,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card1" data-category="pizza" data-card="card">
             <h1>Salami pizza</h1>
             <figure>
                 <div class="overlay"></div>
@@ -27,7 +37,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card2" data-category="pizza" data-card="card">
             <h1>Cheese pizza</h1>
             <figure>
                 <div class="overlay"></div>
@@ -35,7 +45,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card3" data-category="pasta" data-card="card">
             <h1>Lasagna</h1>
             <figure>
                 <div class="overlay"></div>
@@ -43,7 +53,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card4" data-category="pasta" data-card="card">
             <h1>Spaghetti</h1>
             <figure>
                 <div class="overlay"></div>
@@ -51,7 +61,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card5" data-category="pasta" data-card="card">
             <h1>Pasta</h1>
             <figure>
                 <div class="overlay"></div>
@@ -59,7 +69,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card6" data-category="sandwich" data-card="card">
             <h1>Burritos</h1>
             <figure>
                 <div class="overlay"></div>
@@ -67,7 +77,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card7" data-category="sandwich" data-card="card">
             <h1>Sandwich</h1>
             <figure>
                 <div class="overlay"></div>
@@ -75,7 +85,7 @@
             </figure>
         </article>
 
-        <article>
+        <article id="card8" data-category="sandwich" data-card="card">
             <h1>Shoarma sandwich</h1>
             <figure>
                 <div class="overlay"></div>
