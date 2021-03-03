@@ -1,8 +1,14 @@
-Assignment 2.5. Week 3: positioning and layout with CSS-Grid.
+Assignment 2.6. Week 4: JavaScript en het DOM.
 
-Make a new website. Make a digital menu for a restaurant.
-This menu requires at least nine dishes, realize this through CSS grid.
-Make sure you have three kinds of food.
-    e.g. pizza, bread and pasta
+Use the menu website from last assignment.
+Add 3 filter options. When one filter is pressed
+show only the dishes corresponding to the filter.
+Make these filters with data properties.
+Make sure you can disable the selected filter as well.
 
-Make the website responsive and W3C validated.
+- Combination of filters needs to work.
+- When all filters are disabled, show all products.
+- Add animations which enhances the user experience.
+- Each page is W3C validated.
+- The JavaScript does not contain errors.
+- The site is completely responsive up to 400px.
