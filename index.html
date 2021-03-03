@@ -13,84 +13,92 @@
     </header>
     <main>
         <form>
-            <input onclick="filterDishes()" type="checkbox" id="pizza" name="pizza" value="Pizza">
-            <label for="pizza">Pizza</label><br>
-            <input onclick="filterDishes()" type="checkbox" id="pasta" name="pasta" value="Pasta">
-            <label for="pasta">Pasta</label><br>
-            <input onclick="filterDishes()" type="checkbox" id="sandwiches" name="sandwiches" value="Sandwiches">
-            <label for="sandwiches">Sandwiches</label><br>
+            <div>
+                <input onclick="filterDishes()" type="checkbox" id="pizza" name="pizza" value="Pizza">
+                <label for="pizza">Pizza</label><br />
+            </div>
+            <div>
+                <input onclick="filterDishes()" type="checkbox" id="pasta" name="pasta" value="Pasta">
+                <label for="pasta">Pasta</label><br />
+            </div>
+            <div>
+                <input onclick="filterDishes()" type="checkbox" id="sandwiches" name="sandwiches" value="Sandwiches">
+                <label for="sandwiches">Sandwiches</label><br />
+            </div>
         </form>
 
-        <article id="card0" data-category="pizza" data-card="card">
-            <h2>Olive Veggie Pizza</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-olives_pizza.jpg" alt="A photo of a pizza with olives">
-            </figure>
-        </article>
+        <article class="dishes">
+            <article id="card0" data-category="pizza">
+                <h2>Olive Veggie Pizza</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-olives_pizza.jpg" alt="A photo of a pizza with olives">
+                </figure>
+            </article>
 
-        <article id="card1" data-category="pizza" data-card="card">
-            <h2>Salami pizza</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-salami_pizza.jpg" alt="A photo of pizza with salami">
-            </figure>
-        </article>
+            <article id="card1" data-category="pizza">
+                <h2>Salami pizza</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-salami_pizza.jpg" alt="A photo of pizza with salami">
+                </figure>
+            </article>
 
-        <article id="card2" data-category="pizza" data-card="card">
-            <h2>Cheese pizza</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-cheese_pizza.jpg" alt="A photo of a pizza with cheese">
-            </figure>
-        </article>
+            <article id="card2" data-category="pizza">
+                <h2>Cheese pizza</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-cheese_pizza.jpg" alt="A photo of a pizza with cheese">
+                </figure>
+            </article>
 
-        <article id="card3" data-category="pasta" data-card="card">
-            <h2>Lasagna</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-lasagna.jpg" alt="A photo of lasagna">
-            </figure>
-        </article>
+            <article id="card3" data-category="pasta">
+                <h2>Lasagna</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-lasagna.jpg" alt="A photo of lasagna">
+                </figure>
+            </article>
 
-        <article id="card4" data-category="pasta" data-card="card">
-            <h2>Spaghetti</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-spaghetti.jpg" alt="A photo of spaghetti">
-            </figure>
-        </article>
+            <article id="card4" data-category="pasta">
+                <h2>Spaghetti</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-spaghetti.jpg" alt="A photo of spaghetti">
+                </figure>
+            </article>
 
-        <article id="card5" data-category="pasta" data-card="card">
-            <h2>Pasta</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-pasta.jpg" alt="A photo of pasta">
-            </figure>
-        </article>
+            <article id="card5" data-category="pasta">
+                <h2>Pasta</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-pasta.jpg" alt="A photo of pasta">
+                </figure>
+            </article>
 
-        <article id="card6" data-category="sandwich" data-card="card">
-            <h2>Burritos</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-burritos.jpg" alt="A photo of burritos">
-            </figure>
-        </article>
+            <article id="card6" data-category="sandwich">
+                <h2>Burritos</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-burritos.jpg" alt="A photo of burritos">
+                </figure>
+            </article>
 
-        <article id="card7" data-category="sandwich" data-card="card">
-            <h2>Sandwich</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-sandwiches.jpg" alt="A photo of sandwiches">
-            </figure>
-        </article>
+            <article id="card7" data-category="sandwich">
+                <h2>Sandwich</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-sandwiches.jpg" alt="A photo of sandwiches">
+                </figure>
+            </article>
 
-        <article id="card8" data-category="sandwich" data-card="card">
-            <h2>Shoarma sandwich</h2>
-            <figure>
-                <div class="overlay"></div>
-                <img src="./img/pexels-shoarma_sandwich.jpg" alt="A photo of a sandwich with shoarma">
-            </figure>
+            <article id="card8" data-category="sandwich">
+                <h2>Shoarma sandwich</h2>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="./img/pexels-shoarma_sandwich.jpg" alt="A photo of a sandwich with shoarma">
+                </figure>
+            </article>
         </article>
     </main>
 </body>

@@ -35,7 +35,7 @@ header > h1 {
     transform: translateX(-50%);
 }
 
-main {
+main > form {
     width: 80%;
     margin: 0 auto;
     display: grid;
@@ -45,23 +45,33 @@ main {
     padding: 40px 0;
 }
 
-main > article {
+main > .dishes {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+    padding: 40px 0;
+}
+
+main > .dishes > article {
     position: relative;
     transition: 0.4s all;
 }
 
-main > article > figure > img {
+main > .dishes > article > figure > img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-main > article:hover {
+main > .dishes > article:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-main > article > h2 {
+main > .dishes > article > h2 {
     position: absolute;
     top: 0;
     color: white;
@@ -79,27 +89,31 @@ main > article > h2 {
 }
 
 @media only screen and (max-width: 700px) {
-    main {
+    main > .dishes {
         grid-template-columns: 1fr;
     }
 
-    main > article > h2 {
+    main > .dishes > article > h2 {
         font-size: 120%;
+    }
+
+    main > form {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
-    main {
+    main > .dishes {
         grid-template-columns: 1fr 1fr;
     }
 
-    main > article > h2 {
+    main > .dishes > article > h2 {
         font-size: 130%;
     }
 }
 
 @media only screen and (min-width: 1300px) {
-    main {
+    main > .dishes {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
