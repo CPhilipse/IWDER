@@ -1,46 +1,46 @@
-window.onload = () => {}
-
 const PIZZA = 'pizza';
 const PASTA = 'pasta';
 const SANDWICH = 'sandwich';
+
+// Filter dishes based on checked categories.
 const filterDishes = () => {
     const elements = document.querySelectorAll("article");
-    const showPizzas = document.getElementById("pizza").checked;
-    const showPasta = document.getElementById("pasta").checked;
-    const showSandwiches = document.getElementById("sandwiches").checked;
-    const uncheckedAll = !showPizzas && !showPasta && !showSandwiches;
+    const checkedPizzas = document.getElementById("pizza").checked;
+    const checkedPasta = document.getElementById("pasta").checked;
+    const checkedSandwiches = document.getElementById("sandwiches").checked;
+    const uncheckedAll = !checkedPizzas && !checkedPasta && !checkedSandwiches;
 
     for (let i = 0; i < elements.length; i++) {
         const article = document.querySelector(`#card${i}`);
         const elementCategory = article.dataset.category // pizza | pasta | sandwich
 
+        // Remove unchecked category elements
+        if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
+                article.style.display = "none";
+        }
+
         if (uncheckedAll) {
+            // Show all elements when nothing is checked.
             article.style.display = "";
         } else {
-            if (showPizzas) {
-                // Show only the pizza elements
+            // If pizza is checked, show pizzas
+            if (checkedPizzas) {
                 if (elementCategory === PIZZA) {
                     article.style.display = "";
-                } else {
-                    article.style.display = "none";
                 }
             }
 
-            if (showPasta) {
-                // Show only the pasta elements
+            // If pasta is checked, show pasta
+            if (checkedPasta) {
                 if (elementCategory === PASTA) {
                     article.style.display = "";
-                } else {
-                    article.style.display = "none";
                 }
             }
 
-            if (showSandwiches) {
-                // Show only the sandwich elements
+            // If sandwiches is checked, show sandwiches
+            if (checkedSandwiches) {
                 if (elementCategory === SANDWICH) {
                     article.style.display = "";
-                } else {
-                    article.style.display = "none";
                 }
             }
         }
