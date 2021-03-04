@@ -13,7 +13,6 @@ const filterDishes = () => {
     for (let i = 0; i < elements.length; i++) {
         const article = document.querySelector(`#card${i}`);
         // pizza | pasta | sandwich - data category
-        // Prevent from showing error with ?, it'll ignore the error if dataset is null.
         const elementCategory = article.dataset.category
 
         // Remove unchecked category elements
