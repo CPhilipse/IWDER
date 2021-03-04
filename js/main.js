@@ -4,7 +4,7 @@ const SANDWICH = 'sandwich';
 
 // Filter dishes based on checked categories.
 const filterDishes = () => {
-    const elements = document.querySelectorAll("article");
+    const elements = document.querySelectorAll("article > article");
     const checkedPizzas = document.getElementById("pizza").checked;
     const checkedPasta = document.getElementById("pasta").checked;
     const checkedSandwiches = document.getElementById("sandwiches").checked;
@@ -14,7 +14,7 @@ const filterDishes = () => {
         const article = document.querySelector(`#card${i}`);
         // pizza | pasta | sandwich - data category
         // Prevent from showing error with ?, it'll ignore the error if dataset is null.
-        const elementCategory = article?.dataset.category
+        const elementCategory = article.dataset.category
 
         // Remove unchecked category elements
         if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
