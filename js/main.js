@@ -20,7 +20,7 @@ const filterDishes = () => {
     const uncheckedAll = !checkedPizzas && !checkedPasta && !checkedSandwiches;
 
     for (let i = 0; i < elements.length; i++) {
-        const article = document.querySelector(`#card${i}`);
+        const article = document.getElementById(`card${i}`);
         // pizza | pasta | sandwich - data category
         const elementCategory = article.dataset.category
 
