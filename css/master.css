@@ -58,6 +58,7 @@ main > .dishes {
 main > .dishes > article {
     position: relative;
     transition: 0.4s all;
+    opacity: 0;
 }
 
 main > .dishes > article > figure > img {

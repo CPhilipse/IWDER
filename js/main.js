@@ -1,3 +1,12 @@
+window.onload = () => {
+    // Fade in elements on initialization
+    const elements = document.querySelectorAll("article > article");
+    for (let i = 0; i < elements.length; i++) {
+        const article = document.querySelector(`#card${i}`);
+        fadeIn(article);
+    }
+}
+
 const PIZZA = 'pizza';
 const PASTA = 'pasta';
 const SANDWICH = 'sandwich';
@@ -17,11 +26,12 @@ const filterDishes = () => {
 
         // Remove unchecked category elements
         if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
-                article.style.display = "none";
+            article.style.display = "none";
         }
 
         if (uncheckedAll) {
             // Show all elements when nothing is checked.
+            article.style.opacity = 1;
             article.style.display = "";
         } else {
             // If pizza is checked, show pizzas
@@ -46,4 +56,16 @@ const filterDishes = () => {
             }
         }
     }
+}
+
+const fadeIn = (element) => {
+    let opacity = 0;
+    const intervalID = setInterval(() => {
+        if (opacity < 1) {
+            opacity += 0.1
+            element.style.opacity = opacity;
+        } else {
+            clearInterval(intervalID);
+        }
+    }, 200);
 }
