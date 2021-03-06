@@ -1,12 +1,3 @@
-window.onload = () => {
-    // Fade in elements on initialization
-    const elements = document.querySelectorAll("article > article");
-    for (let i = 0; i < elements.length; i++) {
-        const article = document.querySelector(`#card${i}`);
-        fadeIn(article);
-    }
-}
-
 const PIZZA = 'pizza';
 const PASTA = 'pasta';
 const SANDWICH = 'sandwich';
@@ -14,15 +5,34 @@ const SANDWICH = 'sandwich';
 // Filter dishes based on checked categories.
 const filterDishes = () => {
     const elements = document.querySelectorAll("article > article");
+    const hearts = document.querySelectorAll("article > article > .hartje");
+    console.log(hearts);
     const checkedPizzas = document.getElementById("pizza").checked;
     const checkedPasta = document.getElementById("pasta").checked;
     const checkedSandwiches = document.getElementById("sandwiches").checked;
     const uncheckedAll = !checkedPizzas && !checkedPasta && !checkedSandwiches;
 
+    const checkedFavourites = document.getElementById("favourites").checked;
+
     for (let i = 0; i < elements.length; i++) {
         const article = document.getElementById(`card${i}`);
         // pizza | pasta | sandwich - data category
-        const elementCategory = article.dataset.category
+        const elementCategory = article.dataset.category;
+
+        // abstract this in its own function. - favourites.
+        const heart = document.getElementById(`hartje${i}`);
+        const topRightCircle = document.getElementsByClassName('topRightCircle')
+        const topLeftCircle = document.getElementsByClassName('topLeftCircle')
+        // const elementHeart = heart.dataset.hartje;
+        console.log(">>> H", topRightCircle);
+        if (checkedFavourites) {
+            heart.style.backgroundColor = "red";
+            topRightCircle[0].style.backgroundColor = "red";
+        }
+
+
+
+
 
         // Remove unchecked category elements
         if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
@@ -31,7 +41,6 @@ const filterDishes = () => {
 
         if (uncheckedAll) {
             // Show all elements when nothing is checked.
-            article.style.opacity = 1;
             article.style.display = "";
         } else {
             // If pizza is checked, show pizzas
@@ -56,16 +65,4 @@ const filterDishes = () => {
             }
         }
     }
-}
-
-const fadeIn = (element) => {
-    let opacity = 0;
-    const intervalID = setInterval(() => {
-        if (opacity < 1) {
-            opacity += 0.1
-            element.style.opacity = opacity;
-        } else {
-            clearInterval(intervalID);
-        }
-    }, 200);
 }
