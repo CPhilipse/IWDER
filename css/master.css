@@ -59,6 +59,14 @@ main > .dishes {
 main > .dishes > article {
     position: relative;
     transition: 0.4s all;
+    animation-name: cardDistortion;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    will-change: transform;
 }
 
 main > .dishes > article > figure > img {
@@ -160,4 +168,16 @@ main > .dishes > article > h2 {
     main > .dishes {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+@keyframes fadeInLeft {
+    0% { left: 20%; }
+    90% { left: 55%; }
+    100% { left: 100%; }
+}
+
+@keyframes cardDistortion {
+    0% { transform: translateY(20px); opacity: 0; }
+    80% { opacity: 0.9; }
+    100% { transform: translateY(0); opacity: 1; }
 }
