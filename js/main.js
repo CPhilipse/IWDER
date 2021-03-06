@@ -16,6 +16,9 @@ const filterDishes = () => {
         // pizza | pasta | sandwich - data category
         const elementCategory = article.dataset.category;
 
+        // Remove fade in when filtering.
+        article.style.animationName = "none";
+
         // Remove unchecked category elements
         if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
             article.style.display = "none";
