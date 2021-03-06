@@ -104,9 +104,7 @@ main > .dishes > article > h2 {
     transition: 0.5s all;
 }
 
-/*.hartje::before {*/
-.topLeftCircle {
-    /*content: "";*/
+.hartje .topLeftCircle {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -115,12 +113,10 @@ main > .dishes > article > h2 {
     transform: translateX(-50%);
     border-radius: 50%;
     background-color: antiquewhite;
-    /*transition: 0.5s all;*/
+    transition: 0.5s all;
 }
 
-/*.hartje::after {*/
-.topRightCircle {
-    /*content: "";*/
+.hartje .topRightCircle {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -129,10 +125,10 @@ main > .dishes > article > h2 {
     transform: translateY(-50%);
     border-radius: 50%;
     background-color: antiquewhite;
-    /*transition: 0.5s all;*/
+    transition: 0.5s all;
 }
 
-.hartje:hover, .hartje:hover::before, .hartje:hover::after  {
+.hartje:hover, .hartje:hover .topRightCircle, .hartje:hover .topLeftCircle {
     background-color: red;
 }
 
