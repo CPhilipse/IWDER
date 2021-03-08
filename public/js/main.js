@@ -29,24 +29,18 @@ const filterDishes = () => {
             article.style.display = "";
         } else {
             // If pizza is checked, show pizzas
-            if (checkedPizzas) {
-                if (elementCategory === PIZZA) {
-                    article.style.display = "";
-                }
+            if (checkedPizzas && elementCategory === PIZZA) {
+                article.style.display = "";
             }
 
             // If pasta is checked, show pasta
-            if (checkedPasta) {
-                if (elementCategory === PASTA) {
-                    article.style.display = "";
-                }
+            if (checkedPasta && elementCategory === PASTA) {
+                article.style.display = "";
             }
 
             // If sandwiches is checked, show sandwiches
-            if (checkedSandwiches) {
-                if (elementCategory === SANDWICH) {
-                    article.style.display = "";
-                }
+            if (checkedSandwiches && elementCategory === SANDWICH) {
+                article.style.display = "";
             }
         }
     }
