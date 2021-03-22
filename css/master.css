@@ -127,17 +127,17 @@ main > section {
     padding: 40px 0;
 }
 
-main > article > article > figure > img {
+main > article > article > a > figure > img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-main > article > article > figure {
+main > article > article > a > figure {
     position: relative;
 }
 
-main > article > article > figure > .overlay {
+main > .category-container > article > a > figure > .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -145,11 +145,11 @@ main > article > article > figure > .overlay {
     background-color: black;
 }
 
-main > .category-container > article > h3 {
+main > .category-container > article > a > h3 {
     position: absolute;
     top: 0;
     color: white;
-    font-size: 120%;
+    font-size: 100%;
     padding: 20px 20px;
     z-index: 9;
 }
@@ -176,6 +176,10 @@ main > .category-container > article {
     will-change: transform;
 }
 
+main > .category-container > article:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 
 
