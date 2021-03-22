@@ -1,0 +1,19 @@
+Final assignment!
+
+The task is to make a front-end webshop on games or shows.
+
+This webshop has multiple websites, gives the illusion that it works, data like
+releasedate, trailers, verhaal, hoofdrolspelers, seizoenen, platformen etc. is presented,
+use css-grid or flexbox, use data-attributes for the various data,
+the content of the page may come from any source, the site
+must have about half an a4 on pure text, website is responsive,
+use JS to make the website interactive, make animations and transitions,
+add sourcelists which includes all the source you've used for your
+content like images and text, the website is semantic, it's hosted
+on firebase and the w3c validator returns 0 errors.
+
+You hand over the link to the site.
+
+You may use embedded video's or maps.
+You may use Google fonts.
+You may write the website in English or Dutch.
