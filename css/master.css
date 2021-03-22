@@ -26,37 +26,88 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-    height: 10vh;
+    height: 50vh;
 }
 
 header > h1 {
     position: absolute;
-    top: 5%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    color: white;
+    z-index: 1;
 }
 
-main > form {
+header > figure > img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+header > figure > .overlay {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    opacity: 0.6;
+    background-color: black;
+}
+
+main > .extra-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main > .extra-information > p {
+    display: inline-block;
+    padding-right: 25px;
+    font-size: 90%;
+}
+
+main > section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+main > article > article > figure > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+main > article > article > figure {
+    position: relative;
+}
+
+main > article > article > figure > .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+}
+
+main > .category-container > article > h3 {
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 120%;
+    padding: 20px 20px;
+    z-index: 9;
+}
+
+main > .category-container {
     width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 80px;
     grid-row-gap: 40px;
-    padding: 40px 0;
 }
 
-main > .dishes {
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 80px;
-    grid-row-gap: 40px;
-    padding: 40px 0;
-}
-
-main > .dishes > article {
+main > .category-container > article {
     position: relative;
     transition: 0.4s all;
     animation-name: cardDistortion;
@@ -69,6 +120,9 @@ main > .dishes > article {
     will-change: transform;
 }
 
+
+
+
 main > .dishes > article > figure > img {
     width: 100%;
     height: 250px;
@@ -78,23 +132,6 @@ main > .dishes > article > figure > img {
 main > .dishes > article:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
-
-main > .dishes > article > h2 {
-    position: absolute;
-    top: 0;
-    color: white;
-    font-size: 140%;
-    padding: 20px 20px;
-    z-index: 9;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    opacity: 0.6;
-    background-color: black;
 }
 
 .hartje {

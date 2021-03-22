@@ -5,142 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
     <script src="js/main.js"></script>
-    <title> Afhaalrestaurant </title>
+    <title> Webshop Mania </title>
 </head>
 <body>
     <header>
-        <h1>Menu</h1>
+        <h1>Webshop Mania</h1>
+        <figure>
+            <div class="overlay"></div>
+            <img src="img/pexels-mario-console.jpg" alt="Mario on console">
+        </figure>
     </header>
     <main>
-        <form>
-            <section>
-                <input onclick="filterDishes()" type="checkbox" id="pizza" name="pizza"
-                       value="Pizza" class="option-input checkbox">
-                <label for="pizza">Pizza</label><br />
-            </section>
-            <section>
-                <input onclick="filterDishes()" type="checkbox" id="pasta" name="pasta"
-                       value="Pasta" class="option-input checkbox">
-                <label for="pasta">Pasta</label><br />
-            </section>
-            <section>
-                <input onclick="filterDishes()" type="checkbox" id="sandwiches" name="sandwiches"
-                       value="Sandwiches" class="option-input checkbox">
-                <label for="sandwiches">Sandwiches</label><br />
-            </section>
-            <section>
-                <input onclick="filterFavourites()" type="checkbox" id="favourites" name="favourites"
-                       value="Favorieten" class="option-input checkbox">
-                <label for="favourites">Favorieten</label><br />
-            </section>
-        </form>
+        <article class="extra-information">
+            <p>Klantbeoordeling 9,2/10</p>
+            <p>Vandaag besteld, morgen in huis!</p>
+            <p>7 dagen per week gratis thuisbezorgd</p>
+        </article>
 
-        <article class="dishes">
-            <article id="card0" data-category="pizza">
-                <h2>Olive Veggie Pizza</h2>
+        <section>
+            <h2>
+                Blader door onze categorieën
+            </h2>
+        </section>
+        <article class="category-container">
+            <article>
+                <h3>
+                    Oude Mario games
+                </h3>
                 <figure>
                     <div class="overlay"></div>
-                    <img src="img/pexels-olives_pizza.jpg" alt="A photo of a pizza with olives">
-                </figure>
-                <figure onclick="makeFavourite('hartje0')" data-hartje="isNotFavourite" id="hartje0" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card1" data-category="pizza">
-                <h2>Salami pizza</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-salami_pizza.jpg" alt="A photo of pizza with salami">
-                </figure>
-                <figure onclick="makeFavourite('hartje1')" data-hartje="isNotFavourite" id="hartje1" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card2" data-category="pizza">
-                <h2>Cheese pizza</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-cheese_pizza.jpg" alt="A photo of a pizza with cheese">
-                </figure>
-                <figure onclick="makeFavourite('hartje2')" data-hartje="isNotFavourite" id="hartje2" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card3" data-category="pasta">
-                <h2>Lasagna</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-lasagna.jpg" alt="A photo of lasagna">
-                </figure>
-                <figure onclick="makeFavourite('hartje3')" data-hartje="isNotFavourite" id="hartje3" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card4" data-category="pasta">
-                <h2>Spaghetti</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-spaghetti.jpg" alt="A photo of spaghetti">
-                </figure>
-                <figure onclick="makeFavourite('hartje4')" data-hartje="isNotFavourite" id="hartje4" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card5" data-category="pasta">
-                <h2>Pasta</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-pasta.jpg" alt="A photo of pasta">
-                </figure>
-                <figure onclick="makeFavourite('hartje5')" data-hartje="isNotFavourite" id="hartje5" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card6" data-category="sandwich">
-                <h2>Burritos</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-burritos.jpg" alt="A photo of burritos">
-                </figure>
-                <figure onclick="makeFavourite('hartje6')" data-hartje="isNotFavourite" id="hartje6" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card7" data-category="sandwich">
-                <h2>Sandwich</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-sandwiches.jpg" alt="A photo of sandwiches">
-                </figure>
-                <figure onclick="makeFavourite('hartje7')" data-hartje="isNotFavourite" id="hartje7" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
-                </figure>
-            </article>
-
-            <article id="card8" data-category="sandwich">
-                <h2>Shoarma sandwich</h2>
-                <figure>
-                    <div class="overlay"></div>
-                    <img src="img/pexels-shoarma_sandwich.jpg" alt="A photo of a sandwich with shoarma">
-                </figure>
-                <figure onclick="makeFavourite('hartje8')" data-hartje="isNotFavourite" id="hartje8" class="hartje">
-                    <div class="topRightCircle"></div>
-                    <div class="topLeftCircle"></div>
+                    <img src="img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </article>
         </article>
