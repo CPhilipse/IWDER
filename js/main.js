@@ -2,6 +2,14 @@ const PIZZA = 'pizza';
 const PASTA = 'pasta';
 const SANDWICH = 'sandwich';
 
+// COLOR PALETTE
+// BLUE : #30A9DE
+// YELLOW : #EFDC05
+// RED : #E53A40
+// BLACK : #090707
+// GRAY : #808080
+// WHITE : #FFFFFF
+
 // Filter dishes based on checked categories.
 const filterDishes = () => {
     const elements = document.querySelectorAll("article > article");
@@ -102,12 +110,15 @@ const makeFavourite = (id) => {
     }
 }
 
-const addToCart = ({id, name, date}) => {
+const addToCart = () => {
     const cartCount = document.getElementById('count');
     const count = cartCount.dataset.count;
+    // Convert count to int so we can add 1 to it.
     const countInt = parseInt(count);
 
-    console.log("Add to cart", countInt);
+    // Show count on site
     cartCount.innerHTML = count;
+
+    // Update data count
     cartCount.dataset.count = `${countInt + 1}`;
 }

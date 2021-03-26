@@ -13,12 +13,12 @@
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li>Account</li>
-        <li><figure class="fa fa-shopping-cart"></figure><p data-count="0" id="count"> </p></li>
+        <li class="cart"><figure class="fa fa-shopping-cart"></figure><p data-count="1" id="count"> </p></li>
     </ul>
 </nav>
 
 <header>
-    <h1>Old Mario Games</h1>
+    <h1>Oude Mario Games</h1>
     <figure>
         <div class="overlay"></div>
         <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
@@ -33,12 +33,12 @@
 
     <section>
         <h2>
-            Blader door onze categorieën
+            Beschikbare oude Mario games
         </h2>
     </section>
     <article class="category-container">
         <article>
-            <a href="../html/old-games.html">
+            <a href="products/mario-bros-1983.html">
                 <h3>
                     Mario Bros. 1983
                 </h3>
@@ -47,7 +47,7 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
-            <button onclick="addToCart({id: 0, name: 'Mario Bros.', date: 1983})" class="addToCartBtn">
+            <button onclick="addToCart()" class="addToCartBtn">
                 Toevoegen aan winkelwagen
             </button>
         </article>
@@ -61,6 +61,9 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
+            <button onclick="addToCart()" class="addToCartBtn">
+                Toevoegen aan winkelwagen
+            </button>
         </article>
         <article>
             <a>
@@ -72,6 +75,9 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
+            <button onclick="addToCart()" class="addToCartBtn">
+                Toevoegen aan winkelwagen
+            </button>
         </article>
         <article>
             <a>
@@ -83,11 +89,15 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
+            <button onclick="addToCart()" class="addToCartBtn">
+                Toevoegen aan winkelwagen
+            </button>
         </article>
     </article>
 </main>
 <footer>
-    <p>Contact</p>
+    <a href="contact.html">Contact</a>
+    <a href="sources.html">Bronnenlijst</a>
 </footer>
 </body>
 </html>
