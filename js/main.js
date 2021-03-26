@@ -101,3 +101,13 @@ const makeFavourite = (id) => {
         topLeftCircle[lastCharOfId].style.backgroundColor = "red";
     }
 }
+
+const addToCart = ({id, name, date}) => {
+    const cartCount = document.getElementById('count');
+    const count = cartCount.dataset.count;
+    const countInt = parseInt(count);
+
+    console.log("Add to cart", countInt);
+    cartCount.innerHTML = count;
+    cartCount.dataset.count = `${countInt + 1}`;
+}
