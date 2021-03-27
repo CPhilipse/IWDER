@@ -98,6 +98,9 @@ const pay = () => {
     payedTitle.style.animation = "fadeInOutTitle 3s ease infinite";
     payedSubtitle.style.animation = "fadeInOutSubtitle 3s ease infinite";
 
+    const totalItemsTitle = document.getElementById('totalItems')
+    totalItemsTitle.style.display = "none";
+
     const payBtn = document.getElementById('payBtn');
     payBtn.style.display = "none";
 }
