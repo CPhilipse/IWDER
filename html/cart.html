@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/master.css">
+    <script src="../js/main.js"></script>
+    <title> Mario Mania </title>
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li class="cart"><a href="cart.html">
+            <figure class="cartIcon">&#128722;</figure>
+            <p data-count="1" id="count"> </p>
+        </a></li>
+    </ul>
+</nav>
 
+<header>
+    <h1>Mario Mania</h1>
+    <h2>Shopping cart</h2>
+    <figure>
+        <div class="overlay"></div>
+        <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
+    </figure>
+</header>
+<main>
+    <section>
+        <h2>
+            2 items in your shopping cart
+        </h2>
+    </section>
+    <article class="games">
+        <article id="cartGame0"  data-releasedate="1983">
+            <a href="products/mario-bros-1983.html">
+                <h3>
+                    Mario Bros. 1983
+                </h3>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
+                </figure>
+            </a>
+            <button onclick="removeFromCart('cartGame0')" class="addToCartBtn">
+                Remove from cart
+            </button>
+        </article>
+        <article id="cartGame1" data-releasedate="1986">
+            <a>
+                <h3>
+                    Super Mario Bros: The Lost Levels. 1986
+                </h3>
+                <figure>
+                    <div class="overlay"></div>
+                    <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
+                </figure>
+            </a>
+            <button onclick="removeFromCart('cartGame1')" class="addToCartBtn">
+                Remove from cart
+            </button>
+        </article>
+    </article>
+    <section>
+        <h1 id="payedTitle">You have payed</h1>
+        <h2 id="payedSubtitle">Enjoy your products!</h2>
+        <button id="payBtn" onclick="pay()">Pay</button>
+    </section>
+</main>
+<footer>
+    <a href="contact.html">Contact</a>
+    <a href="sources.html">Sources</a>
+</footer>
 </body>
 </html>

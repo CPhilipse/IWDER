@@ -251,7 +251,7 @@ main > .game-details > section > h4 {
     padding-top: 15px;
 }
 
-main > .game-details > button {
+main > .game-details > button, main > section > #payBtn {
     background: rgba(9, 7, 7, .8);
     border: 2px solid #808080;
     border-radius: 30px;
@@ -259,6 +259,14 @@ main > .game-details > button {
     color: #FFFFFF;
     font-family: inherit;
     cursor: pointer;
+}
+
+main > section > #payBtn {
+    margin-top: 20px;
+}
+
+main > section > h1 {
+
 }
 
 main > .game-details > button:hover {
@@ -379,6 +387,23 @@ main > form {
     border-radius: 50%;
 }
 
+main > section > #payedTitle, main > section > #payedSubtitle {
+    display: none;
+}
+
+main > section > #payedTitle {
+    color : #30A9DE;
+    font-size : 269%;
+    font-weight : bold;
+    text-transform : uppercase;
+}
+
+main > section > #payedSubtitle {
+    color : #ffffff;
+    font-size : 200%;
+    font-weight : bold;
+}
+
 @media only screen and (max-width: 700px) {
     header > h1 {
         font-size: 150%;
@@ -421,6 +446,14 @@ main > form {
     main > form {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
+    }
+
+    main > section > #payedTitle {
+        font-size : 200%;
+    }
+
+    main > section > #payedSubtitle {
+        font-size : 175%;
     }
 }
 
@@ -470,6 +503,22 @@ main > form {
 @keyframes fadeInSubtitle{
     0% { opacity : 0; margin-left: -32px; }
     100% { opacity : 1; margin-left: 0; }
+}
+
+@keyframes fadeInOutTitle {
+    0% { opacity : 0; transform: translate(-16px, 0); }
+    20% { opacity : 1; transform: translate(0, 0); }
+    65% { opacity : 1; transform: translate(0, 0); }
+    80% { opacity : 0; transform: translate(16px, 0); }
+    100% { opacity : 0; transform: translate(16px, 0); }
+}
+
+@keyframes fadeInOutSubtitle{
+    0% { opacity : 0; transform: translate(-32px, 0); }
+    18% { opacity : 1; transform: translate(0, 0); }
+    64% { opacity : 1; transform: translate(0, 0); }
+    82% { opacity : 0; transform: translate(32px, 0); }
+    100% { opacity : 0; transform: translate(32px, 0); }
 }
 
 @keyframes colorInterpolation {

@@ -57,62 +57,6 @@ const filterGames = () => {
     }
 }
 
-const filterFavourites = () => {
-    const elements = document.querySelectorAll("article > article");
-    const checkedFavourites = document.getElementById("favourites").checked;
-
-    for (let i = 0; i < elements.length; i++) {
-        const article = document.getElementById(`card${i}`);
-
-        const heart = document.getElementById(`hartje${i}`);
-        const favouriteStatus = heart.dataset.hartje;
-
-        if (!checkedFavourites) {
-            article.style.display = "";
-        }
-
-        const isFavourite = favouriteStatus === "isFavourite" && checkedFavourites;
-        const isNotFavourite = favouriteStatus === "isNotFavourite" && checkedFavourites;
-
-        // Show the dishes that are favourite and only when favourites is checked.
-        if (isFavourite) {
-            article.style.display = "";
-        }
-
-        // Hide the dishes that are not favourite and only when favourites is checked.
-        if (isNotFavourite) {
-            article.style.display = "none";
-        }
-    }
-}
-
-const makeFavourite = (id) => {
-    const element = document.getElementById(id);
-    const favouriteStatus = element.dataset.hartje;
-
-    // getElementsByClassName returns collection
-    const topRightCircle = document.getElementsByClassName('topRightCircle');
-    const topLeftCircle = document.getElementsByClassName('topLeftCircle');
-
-    // Get last char of id which makes each element unique
-    const lastCharOfId = id.slice(-1);
-
-    // If element is favourite, than make it not the favourite. Else make it favourite.
-    if(favouriteStatus === 'isFavourite') {
-        element.dataset.hartje = 'isNotFavourite';
-
-        element.style.backgroundColor = "antiquewhite";
-        topRightCircle[lastCharOfId].style.backgroundColor = "antiquewhite";
-        topLeftCircle[lastCharOfId].style.backgroundColor = "antiquewhite";
-    } else {
-        element.dataset.hartje = 'isFavourite';
-
-        element.style.backgroundColor = "red";
-        topRightCircle[lastCharOfId].style.backgroundColor = "red";
-        topLeftCircle[lastCharOfId].style.backgroundColor = "red";
-    }
-}
-
 const addToCart = (id) => {
     const cartCount = document.getElementById('count');
     const count = cartCount.dataset.count;
@@ -132,4 +76,28 @@ const addToCart = (id) => {
     setTimeout(() => {
         gameElement.innerHTML = "Add to cart";
     }, 4000);
+}
+
+const removeFromCart = (id) => {
+    const cartGame = document.getElementById(id);
+    cartGame.style.display = "none";
+}
+
+const pay = () => {
+    // Clean cart, because the user has payed.
+    const cartGame0 = document.getElementById('cartGame0');
+    const cartGame1 = document.getElementById('cartGame1');
+    cartGame0.style.display = "none";
+    cartGame1.style.display = "none";
+
+    // Show fancy payment message
+    const payedTitle = document.getElementById('payedTitle');
+    const payedSubtitle = document.getElementById('payedSubtitle');
+    payedTitle.style.display = "block";
+    payedSubtitle.style.display = "block";
+    payedTitle.style.animation = "fadeInOutTitle 3s ease infinite";
+    payedSubtitle.style.animation = "fadeInOutSubtitle 3s ease infinite";
+
+    const payBtn = document.getElementById('payBtn');
+    payBtn.style.display = "none";
 }
