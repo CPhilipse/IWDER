@@ -93,12 +93,11 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-nav ul li .fa {
+nav ul li .cartIcon {
     padding-right: 10px;
 }
 
-
-nav ul li .fa, nav ul li #count {
+nav ul li .cartIcon, nav ul li #count {
     display: inline-block;
 }
 
@@ -108,7 +107,7 @@ header {
 
 header > h1 {
     color : #30A9DE;
-    font-size : 275%;
+    font-size : 269%;
     font-weight : bold;
     text-transform : uppercase;
     animation : fadeInTitle 2s linear;
@@ -207,16 +206,16 @@ main > .category-container > article:hover {
 }
 
 main > .category-container > article > button {
-    z-index: 999;
+    z-index: 9;
     background: rgba(9, 7, 7, .8);
     border: 2px solid #808080;
     border-radius: 30px;
-    padding: 15px;
+    padding: 10px;
     color: #FFFFFF;
     font-family: inherit;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
     cursor: pointer;
 }
 
@@ -294,6 +293,7 @@ main > .game-details > .prices > p:first-child {
     position: absolute;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
+    animation: colorInterpolation 5s linear infinite;
 }
 
 main > .game-details > .prices > p:last-child {
@@ -439,6 +439,10 @@ main > .dishes > article:hover {
         top: 22vh
     }
 
+    main > .category-container {
+        grid-template-columns: 1fr;
+    }
+
     main > .game-details {
         display: grid;
         grid-template-columns: 1fr;
@@ -466,23 +470,21 @@ main > .dishes > article:hover {
     }
 }
 
-@media (min-width: 700px) and (max-width: 900px) {
+@media (min-width: 700px) and (max-width: 997px) {
     main > .reviews > article {
         display: grid;
         grid-template-columns: 1fr;
     }
-}
 
-@media only screen and (min-width: 1300px) {
-    main > .dishes {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    main > .category-container {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @keyframes cardDistortion {
-    0% { transform: translateY(20px); opacity: 0; }
+    0% { transform: translateX(24px); opacity: 0; }
     80% { opacity: 0.9; }
-    100% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes click-wave {
@@ -509,4 +511,16 @@ main > .dishes > article:hover {
 @keyframes fadeInSubtitle{
     0% { opacity : 0; margin-left: -32px; }
     100% { opacity : 1; margin-left: 0; }
+}
+
+@keyframes colorInterpolation {
+    0% {
+        background-color: #E53A40;
+    }
+    50% {
+        background-color: #30A9DE;
+    }
+    100% {
+        background-color: #E53A40;
+    }
 }
