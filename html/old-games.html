@@ -18,7 +18,7 @@
 </nav>
 
 <header>
-    <h1>Oude Mario Games</h1>
+    <h1>Old Mario Games</h1>
     <figure>
         <div class="overlay"></div>
         <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
@@ -26,18 +26,18 @@
 </header>
 <main>
     <article class="extra-information">
-        <p>Klantbeoordeling 9,2/10</p>
-        <p>Vandaag besteld, morgen in huis!</p>
-        <p>7 dagen per week gratis thuisbezorgd</p>
+        <p>Customer rating 9,2/10</p>
+        <p>Ordered today, tomorrow in home!</p>
+        <p>7 days a week free delivery!</p>
     </article>
 
     <section>
         <h2>
-            Beschikbare oude Mario games
+            Available games
         </h2>
     </section>
     <article class="category-container">
-        <article>
+        <article data-id="0" data-game="Mario Bros." data-releasedate="1983">
             <a href="products/mario-bros-1983.html">
                 <h3>
                     Mario Bros. 1983
@@ -47,8 +47,8 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
-            <button onclick="addToCart()" class="addToCartBtn">
-                Toevoegen aan winkelwagen
+            <button id="game0" onclick="addToCart('game0')" class="addToCartBtn">
+                Add to cart
             </button>
         </article>
         <article>
@@ -61,8 +61,8 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
-            <button onclick="addToCart()" class="addToCartBtn">
-                Toevoegen aan winkelwagen
+            <button id="game1" onclick="addToCart('game1')" class="addToCartBtn">
+                Add to cart
             </button>
         </article>
         <article>
@@ -75,8 +75,8 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
-            <button onclick="addToCart()" class="addToCartBtn">
-                Toevoegen aan winkelwagen
+            <button id="game2" onclick="addToCart('oldGame2')" class="addToCartBtn">
+                Add to cart
             </button>
         </article>
         <article>
@@ -89,15 +89,15 @@
                     <img src="../img/pexels-mario-console.jpg" alt="Mario on console">
                 </figure>
             </a>
-            <button onclick="addToCart()" class="addToCartBtn">
-                Toevoegen aan winkelwagen
+            <button id="game3" onclick="addToCart('game3')" class="addToCartBtn">
+                Add to cart
             </button>
         </article>
     </article>
 </main>
 <footer>
     <a href="contact.html">Contact</a>
-    <a href="sources.html">Bronnenlijst</a>
+    <a href="sources.html">Sources</a>
 </footer>
 </body>
 </html>

@@ -110,7 +110,7 @@ const makeFavourite = (id) => {
     }
 }
 
-const addToCart = () => {
+const addToCart = (id) => {
     const cartCount = document.getElementById('count');
     const count = cartCount.dataset.count;
     // Convert count to int so we can add 1 to it.
@@ -121,4 +121,12 @@ const addToCart = () => {
 
     // Update data count
     cartCount.dataset.count = `${countInt + 1}`;
+
+    // Change text in btn to success message and back to initial state.
+    const gameElement = document.getElementById(id);
+    gameElement.innerHTML = "Successfully added to cart";
+
+    setTimeout(() => {
+        gameElement.innerHTML = "Add to cart";
+    }, 4000);
 }
