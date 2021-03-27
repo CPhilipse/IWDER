@@ -26,6 +26,10 @@ button:focus {
     outline: none!important;
 }
 
+label {
+    color: #ffffff;
+}
+
 body {
     box-sizing: border-box;
     font-size: 16px;
@@ -150,7 +154,8 @@ main {
 }
 
 main > section {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 main > article > article > a > figure > img {
@@ -163,7 +168,7 @@ main > article > article > a > figure {
     position: relative;
 }
 
-main > .category-container > article > a > figure > .overlay {
+main > .games > article > a > figure > .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -171,7 +176,7 @@ main > .category-container > article > a > figure > .overlay {
     background-color: #090707;
 }
 
-main > .category-container > article > a > h3 {
+main > .games > article > a > h3 {
     position: absolute;
     top: 0;
     color: #FFFFFF;
@@ -180,32 +185,31 @@ main > .category-container > article > a > h3 {
     z-index: 9;
 }
 
-main > .category-container {
+main > .games {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 80px;
     grid-row-gap: 40px;
 }
 
-main > .category-container > article {
+main > .games > article {
     position: relative;
     transition: 0.4s all;
-    animation-name: cardDistortion;
-    animation-duration: 1s;
-    animation-timing-function: ease;
+    animation: cardDistortion 1s ease;
     animation-delay: 1s;
     animation-fill-mode: backwards;
     animation-direction: normal;
     animation-iteration-count: 1;
     will-change: transform;
+    display: block;
 }
 
-main > .category-container > article:hover {
+main > .games > article:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-main > .category-container > article > button {
+main > .games > article > button {
     z-index: 9;
     background: rgba(9, 7, 7, .8);
     border: 2px solid #808080;
@@ -310,67 +314,12 @@ main > .game-details > .prices > p:last-child {
     width: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-main > .dishes > article > figure > img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-main > .dishes > article:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.hartje {
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px;
-    transform: rotate(45deg);
-    background-color: antiquewhite;
-    transition: 0.5s all;
-}
-
-.hartje .topLeftCircle {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-color: antiquewhite;
-    transition: 0.5s all;
-}
-
-.hartje .topRightCircle {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background-color: antiquewhite;
-    transition: 0.5s all;
-}
-
-.hartje:hover, .hartje:hover .topRightCircle, .hartje:hover .topLeftCircle {
-    background-color: red;
+/* Filter container */
+main > form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .option-input {
@@ -401,13 +350,13 @@ main > .dishes > article:hover {
     background: #9faab7;
 }
 .option-input:checked {
-    background: #40e0d0;
+    background: #30A9DE;
 }
 .option-input:checked::before {
     height: 40px;
     width: 40px;
     position: absolute;
-    content: 'âœ”';
+    content: '';
     display: inline-block;
     font-size: 26.66667px;
     text-align: center;
@@ -417,7 +366,7 @@ main > .dishes > article:hover {
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
-    background: #40e0d0;
+    background: #30A9DE;
     content: '';
     display: block;
     position: relative;
@@ -439,7 +388,7 @@ main > .dishes > article:hover {
         top: 22vh
     }
 
-    main > .category-container {
+    main > .games {
         grid-template-columns: 1fr;
     }
 
@@ -468,6 +417,11 @@ main > .dishes > article:hover {
     main > .game-details > .prices > p:last-child {
         width: 60%;
     }
+
+    main > form {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 997px) {
@@ -476,8 +430,13 @@ main > .dishes > article:hover {
         grid-template-columns: 1fr;
     }
 
-    main > .category-container {
+    main > .games {
         grid-template-columns: 1fr 1fr;
+    }
+
+    main > form {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 20px;
     }
 }
 

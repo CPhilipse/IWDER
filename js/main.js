@@ -1,6 +1,8 @@
-const PIZZA = 'pizza';
-const PASTA = 'pasta';
-const SANDWICH = 'sandwich';
+const OLDEST = 1980;
+const OLD = 1990;
+const NEWER = 2000;
+const NEWEST = 2010;
+const CURRENT = 2021;
 
 // COLOR PALETTE
 // BLUE : #30A9DE
@@ -10,45 +12,46 @@ const SANDWICH = 'sandwich';
 // GRAY : #808080
 // WHITE : #FFFFFF
 
-// Filter dishes based on checked categories.
-const filterDishes = () => {
-    const elements = document.querySelectorAll("article > article");
+// Filter games based on date.
+const filterGames = () => {
+    const elements = document.querySelectorAll("main > article > article");
 
-    const checkedPizzas = document.getElementById("pizza").checked;
-    const checkedPasta = document.getElementById("pasta").checked;
-    const checkedSandwiches = document.getElementById("sandwiches").checked;
-    const uncheckedAll = !checkedPizzas && !checkedPasta && !checkedSandwiches;
+    const oldestIsChecked = document.getElementById("1980").checked;
+    const oldIsChecked = document.getElementById("1990").checked;
+    const newerIsChecked = document.getElementById("2000").checked;
+    const newestIsChecked = document.getElementById("2010").checked;
+    const uncheckedAll = !oldestIsChecked && !oldIsChecked && !newerIsChecked && !newestIsChecked;
 
     for (let i = 0; i < elements.length; i++) {
-        const article = document.getElementById(`card${i}`);
-        // pizza | pasta | sandwich - data category
-        const elementCategory = article.dataset.category;
+        const gameElement = document.getElementById(`${i}`);
+        const gameDate = gameElement.dataset.releasedate;
 
         // Remove fade in when filtering.
-        article.style.animationName = "none";
+        gameElement.style.animationName = "none";
 
         // Remove unchecked category elements
-        if (!checkedPizzas || !checkedPasta || !checkedSandwiches) {
-            article.style.display = "none";
+        if (!oldestIsChecked || !oldIsChecked || !newerIsChecked || !newestIsChecked) {
+            gameElement.style.display = "none";
         }
 
         if (uncheckedAll) {
             // Show all elements when nothing is checked.
-            article.style.display = "";
+            gameElement.style.display = "";
         } else {
-            // If pizza is checked, show pizzas
-            if (checkedPizzas && elementCategory === PIZZA) {
-                article.style.display = "";
+            if (oldestIsChecked && gameDate >= OLDEST && gameDate <= OLD) {
+                gameElement.style.display = "";
             }
 
-            // If pasta is checked, show pasta
-            if (checkedPasta && elementCategory === PASTA) {
-                article.style.display = "";
+            if (oldIsChecked && gameDate >= OLD && gameDate <= NEWER) {
+                gameElement.style.display = "";
             }
 
-            // If sandwiches is checked, show sandwiches
-            if (checkedSandwiches && elementCategory === SANDWICH) {
-                article.style.display = "";
+            if (newerIsChecked && gameDate >= NEWER && gameDate <= NEWEST) {
+                gameElement.style.display = "";
+            }
+
+            if (newestIsChecked && gameDate >= NEWEST && gameDate <= CURRENT) {
+                gameElement.style.display = "";
             }
         }
     }
