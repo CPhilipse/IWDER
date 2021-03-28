@@ -6,7 +6,6 @@ const CURRENT = 2021;
 
 // COLOR PALETTE
 // BLUE : #30A9DE
-// YELLOW : #EFDC05
 // RED : #E53A40
 // BLACK : #090707
 // GRAY : #808080
@@ -73,8 +72,17 @@ const addToCart = (id) => {
     const gameElement = document.getElementById(id);
     gameElement.innerHTML = "Successfully added to cart";
 
+    // Remove price tag temp to make room for the expanded button
+    const priceTag = document.getElementById('priceTag');
+    if(priceTag) {
+        priceTag.style.display = "none";
+    }
+
     setTimeout(() => {
         gameElement.innerHTML = "Add to cart";
+        if(priceTag) {
+            priceTag.style.display = "";
+        }
     }, 4000);
 }
 

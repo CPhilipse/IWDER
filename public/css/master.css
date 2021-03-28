@@ -114,7 +114,7 @@ header > h1 {
     font-size : 269%;
     font-weight : bold;
     text-transform : uppercase;
-    animation : fadeInTitle 2s linear;
+    animation : fadeInTitle 1s linear;
     position: absolute;
     top: 20vh;
     left: 50%;
@@ -128,7 +128,7 @@ header > h2 {
     top: 25vh;
     color : #FFFFFF;
     font-size : 175%;
-    animation : fadeInSubtitle 2s linear;
+    animation : fadeInSubtitle 1s linear;
     transform: translateX(-50%);
     z-index: 9;
 }
@@ -156,6 +156,7 @@ main {
 main > section {
     padding-top: 40px;
     padding-bottom: 20px;
+    animation: slide-in-left 2.5s linear;
 }
 
 main > article > article > a > figure > img {
@@ -185,6 +186,21 @@ main > .games > article > a > h3 {
     z-index: 9;
 }
 
+main > article > article > a > section {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+main > article > article > a > section > h4 {
+    color: #30A9DE;
+    font-size: 110%;
+}
+
+main > article > article > a > section > h5 > s {
+    color: #808080;
+}
+
 main > .games {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -195,7 +211,7 @@ main > .games {
 main > .games > article {
     position: relative;
     transition: 0.4s all;
-    animation: cardDistortion 1s ease;
+    animation: slide-in-bottom 2s linear;
     animation-delay: 1s;
     animation-fill-mode: backwards;
     animation-direction: normal;
@@ -246,6 +262,11 @@ main > .game-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 25px;
+    animation: slide-in-bottom 1s linear;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-iteration-count: 1;
 }
 
 main > .game-details > figure > img {
@@ -336,6 +357,10 @@ main > form {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+main > form > section {
+    animation: slide-in-right 2s ease;
 }
 
 .option-input {
@@ -482,11 +507,9 @@ main > section > #payedSubtitle {
     }
 }
 
-@keyframes cardDistortion {
+@keyframes card-fadein {
     0% { transform: translateX(24px); opacity: 0; }
-    30% { background-color: #E53A40; }
-    60% { background-color: #30A9DE; }
-    80% { opacity: 0.9; background-color: #30A9DE; }
+    90% { opacity: 0.9 }
     100% { transform: translateX(0); opacity: 1; }
 }
 
@@ -541,5 +564,38 @@ main > section > #payedSubtitle {
     }
     100% {
         background-color: #E53A40;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
