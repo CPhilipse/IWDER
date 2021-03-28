@@ -1,15 +1,20 @@
-const OLDEST = 1980;
-const OLD = 1990;
-const NEWER = 2000;
-const NEWEST = 2010;
-const CURRENT = 2021;
-
-// COLOR PALETTE
+/** COLOR PALETTE */
 // BLUE : #30A9DE
 // RED : #E53A40
 // BLACK : #090707
 // GRAY : #808080
 // WHITE : #FFFFFF
+
+// Force scroll to top on refresh for a better animation experience.
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+const OLDEST = 1980;
+const OLD = 1990;
+const NEWER = 2000;
+const NEWEST = 2010;
+const CURRENT = 2021;
 
 // Filter games based on date.
 const filterGames = () => {
@@ -72,16 +77,22 @@ const addToCart = (id) => {
     const gameElement = document.getElementById(id);
     gameElement.innerHTML = "Successfully added to cart";
 
-    // Remove price tag temp to make room for the expanded button
-    const priceTag = document.getElementById('priceTag');
-    if(priceTag) {
-        priceTag.style.display = "none";
+    // Remove price tag temp of the corresponding item
+    // to make room for the expanded button.
+    const priceTagElements = document.getElementsByClassName('priceTag');
+    const intId = parseInt(id.slice(-1));
+    if(priceTagElements?.length > 0) {
+        for (let i = 0; i < priceTagElements.length; i++) {
+            priceTagElements[intId].style.display = "none";
+        }
     }
 
     setTimeout(() => {
         gameElement.innerHTML = "Add to cart";
-        if(priceTag) {
-            priceTag.style.display = "";
+        if(priceTagElements?.length > 0) {
+            for (let i = 0; i < priceTagElements.length; i++) {
+                priceTagElements[intId].style.display = "";
+            }
         }
     }, 4000);
 }

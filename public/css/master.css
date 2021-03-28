@@ -35,10 +35,11 @@ body {
     font-size: 16px;
     font-family: Verdana, Arial, serif;
     background-color: rgba(9, 7, 7, .9);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 body::-webkit-scrollbar {
-    width: 5px;
+    width: 4px;
     background-color: #090707;
 }
 
@@ -157,6 +158,7 @@ main > section {
     padding-top: 40px;
     padding-bottom: 20px;
     animation: slide-in-left 2.5s linear;
+    animation-iteration-count: 1;
 }
 
 main > article > article > a > figure > img {
@@ -193,7 +195,7 @@ main > article > article > a > section {
 }
 
 main > article > article > a > section > h4 {
-    color: #30A9DE;
+    color: #FFFFFF;
     font-size: 110%;
 }
 
@@ -361,6 +363,7 @@ main > form {
 
 main > form > section {
     animation: slide-in-right 2s ease;
+    animation-iteration-count: 1;
 }
 
 .option-input {
