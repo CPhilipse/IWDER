@@ -6,15 +6,48 @@
 // WHITE : #FFFFFF
 
 // Force scroll to top on refresh for a better animation experience.
-window.onbeforeunload = function () {
+window.onbeforeunload = () => {
     window.scrollTo(0, 0);
-}
+};
 
 const OLDEST = 1980;
 const OLD = 1990;
 const NEWER = 2000;
 const NEWEST = 2010;
 const CURRENT = 2021;
+
+window.onload = () => {
+    // Add event listeners for filter
+    const addEventListenersToFilter = [OLDEST, OLD, NEWER, NEWEST];
+    addEventListenersToFilter.map((date) => {
+        const element = document.getElementById(`${date}`);
+        if(element) {
+            element.addEventListener("click", () => {
+                filterGames();
+            });
+        }
+    });
+
+    // Add event listeners for the 'Add to cart' functionality.
+    const addEventListenersToAddToCartBtn = new Array(20).fill(0);
+    addEventListenersToAddToCartBtn.map((_, index) => {
+        const element = document.getElementById(`game${index}`);
+        if(element) {
+            element.addEventListener("click", () => {
+                addToCart(`game${index}`);
+            });
+        }
+    });
+
+    // Add event listener for the 'Add to cart' functionality on game details.
+    const elementId = 'game';
+    const element = document.getElementById(elementId);
+    if(element) {
+        element.addEventListener("click", () => {
+                addToCart(elementId)
+        })
+    }
+};
 
 // Filter games based on date.
 const filterGames = () => {
@@ -61,7 +94,7 @@ const filterGames = () => {
     }
 }
 
-const addToCart = (id) => {
+const updateCartNumber = () => {
     const cartCount = document.getElementById('count');
     const count = cartCount.dataset.count;
     // Convert count to int so we can add 1 to it.
@@ -72,15 +105,27 @@ const addToCart = (id) => {
 
     // Update data count
     cartCount.dataset.count = `${countInt + 1}`;
+}
 
+const notifyUserItemSuccessfullyAdded = (id) => {
     // Change text in btn to success message and back to initial state.
     const gameElement = document.getElementById(id);
     gameElement.innerHTML = "Successfully added to cart";
+    setTimeout(() => {
+        gameElement.innerHTML = "Add to cart";
+    }, 4000);
+}
 
+const removePricetag = (id) => {
     // Remove price tag temp of the corresponding item
     // to make room for the expanded button.
     const priceTagElements = document.getElementsByClassName('priceTag');
-    const intId = parseInt(id.slice(-1));
+
+    // Extract number id from string id
+    let arrayOfStringId = id.match(/\d/g);
+    arrayOfStringId = arrayOfStringId.join("");
+    const intId = parseInt(arrayOfStringId);
+
     if(priceTagElements?.length > 0) {
         for (let i = 0; i < priceTagElements.length; i++) {
             priceTagElements[intId].style.display = "none";
@@ -88,13 +133,22 @@ const addToCart = (id) => {
     }
 
     setTimeout(() => {
-        gameElement.innerHTML = "Add to cart";
         if(priceTagElements?.length > 0) {
             for (let i = 0; i < priceTagElements.length; i++) {
                 priceTagElements[intId].style.display = "";
             }
         }
     }, 4000);
+}
+
+const addToCart = (id) => {
+    updateCartNumber();
+    notifyUserItemSuccessfullyAdded(id);
+
+    const onGameDetailsPage = id === 'game';
+    if(!onGameDetailsPage) {
+        removePricetag(id);
+    }
 }
 
 const removeFromCart = (id) => {
