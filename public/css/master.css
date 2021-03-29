@@ -525,6 +525,18 @@ main > section > #payedSubtitle {
         grid-row-gap: 20px;
     }
 
+    main > .game-details > .prices > p:first-child {
+        width: 60%;
+    }
+
+    main > .game-details > .prices > p:last-child {
+        width: 60%;
+    }
+
+    main > .game-details > button {
+        margin-top: 60px;
+    }
+
     main > .game-details {
         grid-template-columns: 1fr;
     }

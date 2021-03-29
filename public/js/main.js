@@ -47,7 +47,27 @@ window.onload = () => {
                 addToCart(elementId)
         })
     }
-};
+
+    // Add event listeners for the 'Remove' from cart functionality on the cart page.
+    const addEventListenersToRemoveFromCart = ['cartGame0', 'cartGame1'];
+    addEventListenersToRemoveFromCart.map((id) => {
+        const element = document.getElementById(id);
+        if(element) {
+            element.addEventListener("click", () => {
+                removeFromCart(id);
+            });
+        }
+    });
+
+    // Add event listener to the 'Pay' button on the cart page.
+    const payBtnId = 'payBtn';
+    const payBtn = document.getElementById(payBtnId);
+    if(payBtn) {
+        payBtn.addEventListener("click", () => {
+            pay()
+        });
+    }
+}
 
 // Filter games based on date.
 const filterGames = () => {
@@ -102,7 +122,6 @@ const updateCartNumber = () => {
 
     // Show count on site
     cartCount.innerHTML = count;
-
     // Update data count
     cartCount.dataset.count = `${countInt + 1}`;
 }
@@ -157,7 +176,7 @@ const removeFromCart = (id) => {
 }
 
 const pay = () => {
-    // Clean cart, because the user has payed.
+    // Clear cart, because the user has payed.
     const cartGame0 = document.getElementById('cartGame0');
     const cartGame1 = document.getElementById('cartGame1');
     cartGame0.style.display = "none";
@@ -166,10 +185,12 @@ const pay = () => {
     // Show fancy payment message
     const payedTitle = document.getElementById('payedTitle');
     const payedSubtitle = document.getElementById('payedSubtitle');
-    payedTitle.style.display = "block";
-    payedSubtitle.style.display = "block";
-    payedTitle.style.animation = "fadeInOutTitle 3s ease infinite";
-    payedSubtitle.style.animation = "fadeInOutSubtitle 3s ease infinite";
+    const display = "block";
+    const animation = "fadeInOutTitle 3s ease infinite";
+    payedTitle.style.display = display;
+    payedSubtitle.style.display = display;
+    payedTitle.style.animation = animation;
+    payedSubtitle.style.animation = animation;
 
     const totalItemsTitle = document.getElementById('totalItems')
     totalItemsTitle.style.display = "none";
