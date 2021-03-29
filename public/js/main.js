@@ -173,6 +173,31 @@ const addToCart = (id) => {
 const removeFromCart = (id) => {
     const cartGame = document.getElementById(id);
     cartGame.style.display = "none";
+    cartGame.dataset.removed = "true";
+
+    const payBtn = document.getElementById('payBtn');
+    const cartGame0 = document.getElementById("cartGame0");
+    const cartGame1 = document.getElementById("cartGame1");
+
+    const cartGame0IsRemoved = cartGame0.dataset.removed;
+    const cartGame1IsRemoved = cartGame1.dataset.removed;
+
+    // If all items are removed, disable the pay button.
+    if(cartGame0IsRemoved === "true" && cartGame1IsRemoved === "true") {
+        payBtn.innerHTML = "There are no items in your shopping cart";
+        payBtn.disabled = true;
+        payBtn.style.color = "#808080";
+        return;
+    }
+
+    // Update the total price.
+    if(id === "cartGame0") {
+        payBtn.innerHTML = "Pay the total price of €59,99";
+    }
+
+    if(id === "cartGame1") {
+        payBtn.innerHTML = "Pay the total price of €49,99";
+    }
 }
 
 const pay = () => {
