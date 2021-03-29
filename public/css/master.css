@@ -26,6 +26,7 @@ figcaption {
     margin-top: 5px;
     color: #777;
     font-size: 80%;
+    word-break: break-all;
 }
 
 button:focus {
@@ -503,6 +504,10 @@ main > section > #payedSubtitle {
     main > section > #payedSubtitle {
         font-size : 175%;
     }
+
+    main > .game-details > figure > img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 997px) {
@@ -518,6 +523,14 @@ main > section > #payedSubtitle {
     main > form {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 20px;
+    }
+
+    main > .game-details {
+        grid-template-columns: 1fr;
+    }
+
+    main > .game-details > figure > img {
+        width: 100%;
     }
 }
 
