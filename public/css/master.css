@@ -27,6 +27,7 @@ figcaption {
     color: #777;
     font-size: 80%;
     word-break: break-all;
+    padding-right: 45px;
 }
 
 button:focus {
@@ -279,7 +280,7 @@ main > .game-details {
 }
 
 main > .game-details > figure > img:hover {
-    height: 100%;
+    height: 95%;
 }
 
 main > .game-details > figure > img {
