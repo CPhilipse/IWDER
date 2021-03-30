@@ -571,13 +571,13 @@ main > section > #payedSubtitle {
 }
 
 @keyframes fadeInTitle{
-    0% { opacity : 0; margin-left: -16px; }
-    100% { opacity : 1; margin-left: 0; }
+    0% { opacity : 0; transform: translateX(-250px); }
+    100% { opacity : 1; transform: translateX(-50%); }
 }
 
 @keyframes fadeInSubtitle{
-    0% { opacity : 0; margin-left: -32px; }
-    100% { opacity : 1; margin-left: 0; }
+    0% { opacity : 0; transform: translateX(-32px); }
+    100% { opacity : 1; transform: translateX(-50%); }
 }
 
 @keyframes fadeInOutTitle {
